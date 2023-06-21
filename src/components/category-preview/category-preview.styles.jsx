@@ -8,6 +8,10 @@ export const CategoryPreviewContainer = styled.div`
   margin-bottom: 30px;
 `;
 
+export const Header = styled.h2`
+  text-align: center;
+`;
+
 export const Title = styled(Link)`
   font-size: 28px;
   margin-bottom: 25px;
@@ -16,6 +20,13 @@ export const Title = styled(Link)`
 
 export const Preview = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 20px;
+
+  @media only screen and (min-width: 400px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (min-width: 820px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
